@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для тебя ❤️</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="hearts-canvas"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="subtitle">С любовью в каждой строчке</div>
+            <h1>Для самого дорогого человека</h1>
+        </header>
+
+        <!-- Секция с конвертом -->
+        <section class="envelope-section">
+            <p class="hint" id="envelope-hint">Нажми на печать, чтобы открыть письмо</p>
+            <div class="envelope-wrapper" id="envelope">
+                <div class="envelope-back"></div>
+                <div class="letter">
+                    <h3>Моя любовь,</h3>
+                    <p>
+                        Каждый день рядом с тобой делает меня счастливее. Спасибо за твою улыбку, поддержку, тепло и за все моменты, которые мы создаём вместе.
+                    </p>
+                    <span class="letter-sign">Бесконечно люблю тебя ❤️</span>
+                </div>
+                <div class="envelope-front"></div>
+                <div class="envelope-flap"></div>
+                <div class="wax-seal">❤️</div>
+            </div>
+        </section>
+
+        <!-- Живой таймер отношений -->
+        <section class="timer-section">
+            <h2>Мы вместе уже:</h2>
+            <div class="timer-grid">
+                <div class="timer-box">
+                    <span id="days">0</span>
+                    <small>дней</small>
+                </div>
+                <div class="timer-box">
+                    <span id="hours">0</span>
+                    <small>часов</small>
+                </div>
+                <div class="timer-box">
+                    <span id="minutes">0</span>
+                    <small>минут</small>
+                </div>
+                <div class="timer-box">
+                    <span id="seconds">0</span>
+                    <small>секунд</small>
+                </div>
+            </div>
+            <p class="timer-note">* Демо-дата начала отношений: 14 февраля 2024</p>
+        </section>
+
+        <!-- Купоны на желания -->
+        <section class="coupons-section">
+            <h2>Твои купоны на желания</h2>
+            <p class="hint">Нажми на любой билет, чтобы активировать подарок</p>
+
+            <div class="coupons-grid">
+                <div class="coupon" onclick="activateCoupon(this, event)">
+                    <div class="coupon-icon">🍝</div>
+                    <h3>Ужин твоей мечты</h3>
+                    <p>Готовлю или заказываем всё, что ты захочешь</p>
+                    <div class="stamp">АКТИВИРОВАНО ✓</div>
+                </div>
+
+                <div class="coupon" onclick="activateCoupon(this, event)">
+                    <div class="coupon-icon">🎬</div>
+                    <h3>Вечер кино без споров</h3>
+                    <p>Фильм или сериал выбираешь только ты</p>
+                    <div class="stamp">АКТИВИРОВАНО ✓</div>
+                </div>
+
+                <div class="coupon" onclick="activateCoupon(this, event)">
+                    <div class="coupon-icon">💆‍♀️</div>
+                    <h3>Массаж спины</h3>
+                    <p>30 минут полного релакса в любое время</p>
+                    <div class="stamp">АКТИВИРОВАНО ✓</div>
+                </div>
+
+                <div class="coupon" onclick="activateCoupon(this, event)">
+                    <div class="coupon-icon">✨</div>
+                    <h3>Любой каприз</h3>
+                    <p>Исполнение одного твоего особого желания</p>
+                    <div class="stamp">АКТИВИРОВАНО ✓</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Финальная кнопка -->
+        <section class="final-section">
+            <button class="love-btn" id="love-btn">Нажми, если тоже меня любишь 💖</button>
+            <div class="love-reply" id="love-reply"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
